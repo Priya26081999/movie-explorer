@@ -19,7 +19,7 @@ const MovieDetails = () => {
 
   useEffect(() => {
     if (id) {
-      dispatch(fetchMovieDetailsRequest(Number(id)));
+      dispatch(fetchMovieDetailsRequest());
     }
   }, [dispatch, id]);
 

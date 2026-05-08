@@ -3,6 +3,7 @@ import type {  MovieDetails, MoviesResponse } from "../../interfaces/movie";
 import { fetchMovieDetails, fetchPopularMovies } from "../api";
 import { fetchMovieDetailsFailure, fetchMovieDetailsRequest, fetchMovieDetailsSuccess, fetchMoviesFailure, fetchMoviesRequest, fetchMoviesSuccess } from "../slices/movieSlice";
 import { call, put, takeLatest } from "redux-saga/effects";
+import type { PayloadAction } from "@reduxjs/toolkit";
 
 
 function* handleFetchMovies(){
@@ -20,11 +21,12 @@ function* handleFetchMovies(){
 }
 
 
-function* handleFetchMovieDetails(action: any) {
+function* handleFetchMovieDetails(action:PayloadAction<number>) {
   try {
+    const id = action.payload;
     const response: AxiosResponse<MovieDetails> = yield call(
-      fetchMovieDetails,
-      action.payload
+    fetchMovieDetails,
+      id
     );
 
     yield put(fetchMovieDetailsSuccess(response.data));
