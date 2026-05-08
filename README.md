@@ -1,73 +1,95 @@
-# React + TypeScript + Vite
+# Movie Explore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern movie discovery application built with React, TypeScript, Redux Toolkit, Redux Saga, Material UI, and TMDB API.
 
-Currently, two official plugins are available:
+Users can browse trending movies, explore detailed movie information, ratings, genres, and descriptions through a responsive and clean UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Browse trending and popular movies
+- View movie details page
+- Movie ratings and language support
+- Genre-based information
+- Dynamic routing
+- Responsive UI
+- Redux Toolkit state management
+- Redux Saga for API handling
+- Custom reusable hooks
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React.js
+- TypeScript
+- Material UI (MUI)
+- Redux Toolkit
+- Redux Saga
+- React Router
+- TMDB API
+- Yarn
+- Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Folder Structure
+
+```bash
+src/
+│
+├── components/
+├── pages/
+├── hooks/
+├── redux/
+│   ├── saga/
+│   ├── slices/
+│   ├── store/
+│   └── rootSaga.ts
+│
+├── routes/
+│   └── route.ts
+│
+├── services/
+├── utils/
+└── App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/Priya26081999/movie-explorer.git
+
+cd movie-explorer
+
+yarn install
+
+yarn dev
 ```
+
+---
+
+## 🔑 API Used
+
+TMDB (The Movie Database) API
+
+---
+
+## 📸 Screenshots
+
+_Add screenshots here_
+
+---
+
+## 🌐 Live Demo
+
+_Add deployed project link here_
+
+---
+
+## 👨‍💻 Author
+
+Developed by Arun Priya
