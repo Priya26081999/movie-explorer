@@ -39,7 +39,7 @@ const movieSlice= createSlice({
 
          },
 
-         fetchMovieDetailsRequest: (state, action: PayloadAction<number>) => {
+         fetchMovieDetailsRequest: (state) => {
   state.loading = true;
 },
 fetchMovieDetailsSuccess: (state, action: PayloadAction<MovieDetails>) => {
