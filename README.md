@@ -78,15 +78,11 @@ TMDB (The Movie Database) API
 
 ---
 
-## 📸 Screenshots
 
-https://movie-explorer-ashy-nine.vercel.app/
-
----
 
 ## 🌐 Live Demo
 
-_Add deployed project link here_
+https://movie-explorer-ashy-nine.vercel.app/
 
 ---
 
